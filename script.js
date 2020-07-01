@@ -1,4 +1,4 @@
-// Assignment Code
+// Assignment  javaScript Code for the [password generator program
 //function promptQuestions() {
 
 //}
@@ -10,18 +10,22 @@ var charset_uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", 
 var charset_special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "=", "+", "?", "/"];
 // empty variable to hold char data
 password = "";
+//variable for the query selector
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-
+// this function holds the main logic for generating the random password
 function generatePassword() {
 var repeat = true;
-  while (repeat) {
+// This loop will loop through if the user either answers no or zero char
+  while (repeat) {0
+  //prompt questions for password questions 
     var numberChar = prompt("How many characters would you like in your password");
     var has_lowercase_char = confirm("Do you want lowercase char");
     var has_uppercase_characters = confirm("Do you want uppercase char");
     var has_special_char = confirm("Do you want special char");
     var has_numbers_char = confirm("Do you want numbers in your password");
+    // this will alert the user must select an answer
     if (has_lowercase_char === false && has_uppercase_characters === false && has_special_char === false && has_numbers_char === false) {
       alert("You must choose an option");
       repeat = true;
@@ -32,7 +36,7 @@ var repeat = true;
       repeat = true;
       alert("Must enter the length greater thn zero");
     }
-  
+  //main logic and loop to randomly generate the password
   }
   for (var i = 0; i < numberChar; i++) {
     var num =Math.floor(Math.random() * 4);
