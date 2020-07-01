@@ -14,7 +14,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 
-function writePassword() {
+function generatePassword() {
 var repeat = true;
   while (repeat) {
     var numberChar = prompt("How many characters would you like in your password");
@@ -55,12 +55,18 @@ var repeat = true;
     
   }
   console.log(password);
+  return password;
 }
+
  // var password1 = generatePassword();
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+}
 
 
   // Add event listener to generate button
